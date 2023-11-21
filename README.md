@@ -19,16 +19,18 @@
 
 1. **What’s EC2 Instance types?**
 
-	- General-Purpose Instances
-	- Memory-Optimized Instances
-	- Compute-Optimized Instances
-	- Storage Optimized Instances
+	- General-Purpose Instances: General purpose instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads. These instances are ideal for applications that use these resources in equal proportions such as web servers and code repositories. it has mainly m4 to m7 instance family as well as t2 and t3 instance family
+	- Memory-Optimized Instances : Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory. it has mainly R4 to R7 instance family
+	- Compute-Optimized Instances : Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. Instances belonging to this category are well suited for batch processing workloads, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications. it has c4 to c7 insance family
+ 	- Accelerated Computing :Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+	- Storage Optimized Instances : Storage optimized instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage. They are optimized to deliver tens of thousands of low-latency, random I/O operations per second (IOPS) to applications.
+ 	- HPC Optimized : High performance computing (HPC) instances are purpose built to offer the best price performance for running HPC workloads at scale on AWS. HPC instances are ideal for applications that benefit from high-performance processors such as large, complex simulations and deep learning workloads.it has Hpc6 and Hpc7 instance family. 
 
 ![image](https://github.com/Ahmed-Moourad/DevOps-Interview-Questions-for-Juniors/assets/112473376/f1cd6e00-8218-4d26-9f0e-066be57576e8)
 
 	
  2. **What’s VPC?**
-A VPC is a virtual network that closely resembles a traditional network that you'd operate in your own data center.
+A VPC is a virtual network that closely resembles a traditional network that you'd operate in your own data center. it is logically isolated area in the aws cloud which has its own networking .
 
 3. **What’s S3 bucket and what types of it?**
 Amazon S3 is an object storage service that stores data as objects within buckets. An object is a file and any metadata that describes the file. A bucket is a container for objects.
@@ -139,6 +141,72 @@ Amazon maps out typical latency between IP addresses and AWS regions.
 	- Lambda, Amazon Elastic Container Registry (ECR), Amazon Elastic Kubernetes Service (EKS)
 
 
+17. **What is VPC peering?**
+A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS Cloud. You can launch AWS resources, such as Amazon EC2 instances, into your VPC.
+
+A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. Instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your own VPCs, or with a VPC in another AWS account. The VPCs can be in different Regions (also known as an inter-Region VPC peering connection).
+
+
+18. **What is VPC Flow Logs?**
+You can create a flow log for a VPC, a subnet, or a network interface. If you create a flow log for a subnet or VPC, each network interface in that subnet or VPC is monitored. Flow log data can be published to the following locations: Amazon CloudWatch Logs, Amazon S3, or Amazon Kinesis Data Firehose.Flow logs can help you with a number of tasks, such as:
+	- Diagnosing overly restrictive security group rules
+ 	- Monitoring the traffic that is reaching your instance
+  	- Determining the direction of the traffic to and from the network interfaces  
+
+19. **How Many Buckets can be created in s3 ?**
+in S3 100 buckets can be created in aws account.
+
+
+20. **How Many Elastic ip can be created in aws ?**
+there are 5 ELastic ip can be created in aws account.
+
+
+21. **in vpc how many ip address ae reseved by aws ? **
+In any given VPC, 5 IP addresses are reserved by AWS. In the above VPC with CIDR 10.0. 0.0/16, the following are reserved by AWS.
+	- 10.0.0.0: Network address.
+ 	- 10.0.0.1: Reserved by AWS for the VPC router.
+  	- 10.0.0.2: Reserved by AWS for DNS
+	- 10.0.0.3: Reserved by AWS for future use.
+ 	- 10.0.0.255: Network broadcast address- Broadcast is not supported in VPC but, AWS reserves this IP address.
+
+22. **What are Regions, Edge location and Availability Zones in aws?**
+Regions: A region is a geographical area which consists of 2 or more availability zones. A region is a collection of data centers which are completely isolated from other regions.
+
+Availability zones: An Availability zone is a data center that can be somewhere in the country or city. Data center can have multiple servers, switches, firewalls, load balancing. The things through which you can interact with the cloud reside inside the Data center.
+Edge Locations: Edge locations are the endpoints for AWS used for caching content. it stores the recent searched static data in the edge location and delivers to the user when it searched again and the other data or processing is loaded to user from the server which makes faster acces to the websites.
+  
+
+23. **What is the minimum and maximum size that you can store in S3?**
+The minimum size of an object that you can store in S3 is 0 bytes and the maximum size of an object that you can store in S3 is 5 TB.
+
+
+24. **What are EBS Volumes?**
+Elastic Block Store is a service that provides a persistent block storage volume for use with EC2 instances in aws cloud. EBS volume is automatically replicated within its availability zone to prevent from the component failure. It offers high durability, availability, and low-latency performance required to run your workloads
+
+
+25. **What is Auto Scaling?**
+Auto Scaling is a feature in aws that automatically scales the capacity to maintain steady and predictable performance. While using auto scaling, you can scale multiple resources across multiple services in minutes. If you are already using Amazon EC2 Auto- scaling, then you can combine Amazon EC2 Auto-Scaling with the Auto-Scaling to scale additional resources for other AWS services.
+
+
+26. **What are the main elements of Bucket policy**
+ 	- Sid: A Sid determines what the policy will do. For example, if an action that needs to be performed is adding a new user to an Access Control List (ACL), then the Sid would be AddCannedAcl. If the policy is defined to evaluate IP addresses, then the Sid would be IPAllow.
+	- Effect: An effect defines an action after applying the policy. The action could be either to allow an action or to deny an action.
+	- Principal: A Principal is a string that determines to whom the policy is applied. If we set the principal string as '*', then the policy is applied to everyone, but it is also possible that you can specify individual AWS account.
+	- Action: An Action is what happens when the policy is applied. For example, s3:Getobject is an action that allows to read object data.
+	- Resource: The Resource is a S3 bucket to which the statement is applied. You cannot enter a simply bucket name, you need to specify the bucket name in a specific format. For example, the bucket name is javatpoint-bucket, then the resource would be written as "arn:aws:s3""javatpoint-bucket/*".
+
+
+27. **What is the maximum size of messages in SQS?**
+The maximum size of message in SQS IS 256 KB.
+
+
+28. **How many subnets can you have per VPC?**
+You can have 200 subnets per VPC.
+
+
+28. **Explain the type of auto scalling?**
+	- vertical scaling: Vertical scaling means scaling the compute power such as CPU, RAM to your existing machine
+	- Horizontal Scallling:horizontal scaling means adding more machines to your server or database. Horizontal scaling means increasing the number of nodes, and distributing the tasks among different nodes. Horizontally scalable systems are oftentimes able to outperform vertically scalable systems by enabling parallel execution of workloads and distributing those across many different computers.
 
 ## Docker Questions:
 
