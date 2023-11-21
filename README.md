@@ -204,9 +204,21 @@ The maximum size of message in SQS IS 256 KB.
 You can have 200 subnets per VPC.
 
 
-28. **Explain the type of auto scalling?**
+29. **Explain the type of auto scalling?**
 	- vertical scaling: Vertical scaling means scaling the compute power such as CPU, RAM to your existing machine
 	- Horizontal Scallling:horizontal scaling means adding more machines to your server or database. Horizontal scaling means increasing the number of nodes, and distributing the tasks among different nodes. Horizontally scalable systems are oftentimes able to outperform vertically scalable systems by enabling parallel execution of workloads and distributing those across many different computers.
+
+
+
+30. **How can you login/recover to an ec2 instance for which you have lost the key?**
+Steps
+	- Check the Ec2Config Service
+ 	- Remove the instance root volume
+  	- Connect your volume to a temporary instance
+   	- Change the configuration file
+    	- relaunch the origional instance
+
+
 
 ## Docker Questions:
 
