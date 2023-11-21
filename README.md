@@ -37,7 +37,9 @@ Amazon S3 is an object storage service that stores data as objects within bucket
 	- S3 Standard: for frequently accessed data
 	- S3 Intelligent-Tiering: for automatic cost savings for data with unknown or changing access patterns
 	- S3 Standard-Infrequent Access (S3 Standard-IA) and S3 One Zone-Infrequent Access (S3 One Zone-IA) for less frequently accessed data,
-	- S3 Glacier
+	- S3 Glacier Instant Retrieval for archive data that needs immediate access
+ 	- S3 Glacier Flexible Retrieval (formerly S3 Glacier) for rarely accessed long-term data that does not require immediate access
+  	- Amazon S3 Glacier Deep Archive (S3 Glacier Deep Archive) for long-term archive and digital preservation with retrieval in hours at the lowest cost storage in the cloud. If you have data residency requirements that can’t be met by an existing AWS Region 
 
 4. **Is there a difference between SG and NACL?**
 Security groups are associated with an instance of a service. It can be associated with one or more security groups that have been created by the user. (Stateful)
