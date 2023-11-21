@@ -219,6 +219,15 @@ Steps
     	- relaunch the origional instance
 
 
+31. **What is Load Balancer and What are the types of load balancer?**
+
+32. **What are the routing policies in the route53?**
+
+33. **Difference between Dedicated Host And Dedicated instace?**
+
+34. **Define the purchasing options in instance?**
+
+
 
 ## Docker Questions:
 
