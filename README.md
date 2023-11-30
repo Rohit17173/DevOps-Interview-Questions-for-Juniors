@@ -295,7 +295,8 @@ entrypoint not override, CMD overwrite with before actions
 22. **What are the types of Docker networks?**
 bridge, overlay, host, none
 
-  
+23. **What’s the difference between CMD and ENtryPoint?**
+    
 
 23. **What’s the difference between COPY and ADD?**
 
