@@ -307,8 +307,7 @@ bridge, overlay, host, none
 A URL instead of a local file/directory. &&&& Extract tar from the source directory into the destination.
 
 
-23. **Which command is used to encrypt the password to store inside the secreats dockerfile?**  
-	echo -n "My@password" | base64
+
 
 
 24. **How could you secure your Dockerfile?**
@@ -555,7 +554,8 @@ The rolling-update command works with Replication Controllers, but won't work wi
 	  **Secrets** can be mounted as data volumes or exposed as environment variables to be used by a container in a Pod.
 Secrets can also be used by other parts of the system, without being directly exposed to the Pod.
 
-  
+23. **Which command is used to encrypt the password to store inside the secreats dockerfile?**  
+	echo -n "My@password" | base64
 
 47. **Is it possible to create multiple containers in one pod?**
 YES – but better be one container/Pod
