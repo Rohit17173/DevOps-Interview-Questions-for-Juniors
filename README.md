@@ -306,7 +306,10 @@ bridge, overlay, host, none
 	**ADD** does the same but in addition, it also supports 2 other sources:
 A URL instead of a local file/directory. &&&& Extract tar from the source directory into the destination.
 
-  
+
+23. **Which command is used to encrypt the password to store inside the secreats dockerfile?**  
+	echo -n "My@password" | base64
+
 
 24. **How could you secure your Dockerfile?**
 	- Run the container as a non-root user. ...
