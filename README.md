@@ -296,7 +296,8 @@ entrypoint not override, CMD overwrite with before actions
 bridge, overlay, host, none
 
 23. **What’s the difference between CMD and ENtryPoint?**
-    
+    cmd : command will execute only recent and only one from the dockerfile and if a command is passed while creating the container it will replace the cmd inside dockerfile only command passed through command line will be executed
+    EntryPoint : this can be run multiple times in a dockerfile and it executes the command inside it.
 
 23. **What’s the difference between COPY and ADD?**
 
