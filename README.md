@@ -234,7 +234,15 @@ In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a m
  - Sticky sessions: Maintain user sessions on the same backend instance for consistent user experience.
  - It automatically distributes incoming traffic across multiple resources, such as EC2 instances, containers, or Lambda functions.
 
-	
+
+ 31. **What is Network load Balancer ?**
+ - An Network Load Balancer (ALB) is a type of load balancer offered by Amazon Web Services (AWS) within its Elastic Load Balancing (ELB) service.
+ - A Network Load Balancer functions at the fourth layer (network layer) of the Open Systems Interconnection (OSI) model.
+ - It operates at layer 4 of the Open Systems Interconnection (OSI) model, meaning it distributes incoming network traffic across multiple resources (e.g., EC2 instances, containers, or Network Load Balancers) based on IP addresses and ports. This ensures efficient utilization of resources and improved performance for your applications.
+ - It can handle millions of requests per second.
+ - routing traffic based on IP addresses and ports. it is designed to handle high throughtput, low lagtency trafic.
+ - it is suitable for the tcp/udp and tls traffic and i often used for extreme performance scenarios.
+
 
 
 33. **What are the routing policies in the route53?**
