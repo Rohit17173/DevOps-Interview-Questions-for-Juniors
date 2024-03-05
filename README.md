@@ -203,6 +203,8 @@ The maximum size of message in SQS IS 256 KB.
 28. **How many subnets can you have per VPC?**
 You can have 200 subnets per VPC.
 
+28. **How many vpc can you have per region?**
+You can have 5 vpc per region.
 
 29. **Explain the type of auto scalling?**
 	- vertical scaling: Vertical scaling means scaling the compute power such as CPU, RAM to your existing machine
@@ -220,12 +222,16 @@ Steps
 
 
 31. **What is Load Balancer and What are the types of load balancer?**
+In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a managed service that acts as a load balancer. It automatically distributes incoming traffic across multiple resources, such as EC2 instances, containers, or Network Load Balancers, within your VPC (Virtual Private Cloud).
 
-32. **What are the routing policies in the route53?**
+types of load balancer:
 
-33. **Difference between Dedicated Host And Dedicated instace?**
 
-34. **Define the purchasing options in instance?**
+33. **What are the routing policies in the route53?**
+
+34. **Difference between Dedicated Host And Dedicated instace?**
+
+35. **Define the purchasing options in instance?**
 
 
 
