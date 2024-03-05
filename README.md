@@ -225,7 +225,14 @@ Steps
 In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a managed service that acts as a load balancer. It automatically distributes incoming traffic across multiple resources, such as EC2 instances, containers, or Network Load Balancers, within your VPC (Virtual Private Cloud).
 
 31. **What is Application load Balancer load balancer?**
- An Application Load Balancer (ALB) is a type of load balancer offered by Amazon Web Services (AWS) within its Elastic Load Balancing (ELB) service. It operates at the application layer (layer 7). An Application Load Balancer makes routing decisions at the application layer (HTTP/HTTPS), supports path-based routing, and can route requests to one or more ports on each container instance in your cluster
+ - An Application Load Balancer (ALB) is a type of load balancer offered by Amazon Web Services (AWS) within its Elastic Load Balancing (ELB) service.
+ - It operates at the application layer (layer 7).
+ - An Application Load Balancer makes routing decisions at the application layer (HTTP/HTTPS).
+ - supports path-based routing Path-based routing: Route requests to different backend resources based on specific URL paths.
+ - and can route requests to one or more ports on each container instance in your cluster.
+ - Host-based routing: Route traffic based on the hostname specified in the request.
+ - Sticky sessions: Maintain user sessions on the same backend instance for consistent user experience.
+ - It automatically distributes incoming traffic across multiple resources, such as EC2 instances, containers, or Lambda functions.
 
 	
 
