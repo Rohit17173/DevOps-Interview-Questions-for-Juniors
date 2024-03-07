@@ -213,6 +213,7 @@ You can have 5 vpc per region.
 
 
 30. **How can you login/recover to an ec2 instance for which you have lost the key?**
+
 Steps
 	- Check the Ec2Config Service
  	- Remove the instance root volume
@@ -221,7 +222,7 @@ Steps
     	- relaunch the origional instance
 
 
-31. **What is Load Balancer and What are the types of load balancer?**
+32. **What is Load Balancer and What are the types of load balancer?**
 In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a managed service that acts as a load balancer. It automatically distributes incoming traffic across multiple resources, such as EC2 instances, containers, or Network Load Balancers, within your VPC (Virtual Private Cloud).
 
 31. **What is Application load Balancer load balancer?**
@@ -244,6 +245,11 @@ In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a m
  - it is suitable for the tcp/udp and tls traffic and i often used for extreme performance scenarios.
 
 
+31. **What is Gateway load Balancer ?**
+    - A Gateway Load Balancer operates at the third layer of the Open Systems Interconnection (OSI) model,the network layer.
+    - A gateway load balancer is a specific type of load balancer designed to distribute traffic across multiple virtual network appliances (NVAs) in a network.
+    - It acts as a single entry and exit point for all traffic, ensuring that incoming requests are efficiently routed to the appropriate NVA based on predefined rules.
+    - helps you run and scale 3rd party applications.
 
 33. **What are the routing policies in the route53?**
 
