@@ -247,9 +247,11 @@ In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a m
 
 31. **What is Gateway load Balancer ?**
     - A Gateway Load Balancer operates at the third layer of the Open Systems Interconnection (OSI) model,the network layer.
-    - A gateway load balancer is a specific type of load balancer designed to distribute traffic across multiple virtual network appliances (NVAs) in a network.
+    - A gateway load balancer is a specific type of load balancer designed to distribute traffic across multiple virtual network appliances (NVAs) in a network , such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems.
     - It acts as a single entry and exit point for all traffic, ensuring that incoming requests are efficiently routed to the appropriate NVA based on predefined rules.
     - helps you run and scale 3rd party applications.
+    - The Gateway Load Balancer and its registered virtual appliance instances exchange application traffic using the GENEVE(Generic Network Virtualization Encapsulation
+Abstract) protocol on port 6081.
 
 33. **What are the routing policies in the route53?**
 
