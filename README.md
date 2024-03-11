@@ -256,10 +256,19 @@ Abstract) protocol on port 6081.
 33. **What are the routing policies in the route53?**
 	- Simple Routing:
 		- The most basic policy, it's suitable for single resource setups. It directs all traffic for a specific domain or subdomain to the resource record's IP address (e.g., A record for a web server).
+  		- use asimple routing policy when we have a single resource that performs a given function for your domain. 
 	-  Failover Routing:
 		- Ensures high availability by providing a backup resource in case the primary resource becomes unavailable. Route 53 routes traffic to the primary resource by default. If the health checks detect an issue with the primary, it automatically switches traffic to the healthy backup resource.
   	- Weighted Routing:
  		- Distributes traffic across multiple healthy resources based on pre-defined weights. You assign a weight to each resource record, determining the percentage of traffic it receives. This allows for load balancing among resources with varying capacities.
+   	- Latency-based Routing:
+    		- Routes traffic to the resource that provides the lowest latency (response time) for the user's location. Route 53 considers the geographic location of your resources and the user's IP address to determine the optimal route.
+     	- Geolocation Routing:
+      		- Directs traffic to the resource that's geographically closest to the user's location. This can improve user experience by reducing latency, especially for geographically distributed resources.
+        - GeoProximity Routing (Traffic Flow only):
+        	- A variation of geolocation routing, it's specifically designed for Route 53 Traffic Flow, a premium routing control feature. It allows you to route traffic based on the proximity of your resources, not just the user's location. This is useful for scenarios where resources are geographically dispersed and latency optimization is crucial.
+         - Multivalue Answer Routing:
+         	- Provides redundancy by returning multiple healthy resource records in the DNS response. This allows clients to choose the optimal resource based on their own criteria (e.g., round robin selection).     
 
       			 
 
