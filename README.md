@@ -254,10 +254,18 @@ In the context of Amazon Web Services (AWS), Elastic Load Balancing (ELB) is a m
 Abstract) protocol on port 6081.
 
 33. **What are the routing policies in the route53?**
+	- Simple Routing:
+		- The most basic policy, it's suitable for single resource setups. It directs all traffic for a specific domain or subdomain to the resource record's IP address (e.g., A record for a web server).
+	-  Failover Routing:
+		- Ensures high availability by providing a backup resource in case the primary resource becomes unavailable. Route 53 routes traffic to the primary resource by default. If the health checks detect an issue with the primary, it automatically switches traffic to the healthy backup resource.
+  	- Weighted Routing:
+ 		- Distributes traffic across multiple healthy resources based on pre-defined weights. You assign a weight to each resource record, determining the percentage of traffic it receives. This allows for load balancing among resources with varying capacities.
 
-34. **Difference between Dedicated Host And Dedicated instace?**
+      			 
 
-35. **Define the purchasing options in instance?**
+35. **Difference between Dedicated Host And Dedicated instace?**
+
+36. **Define the purchasing options in instance?**
 
 
 
