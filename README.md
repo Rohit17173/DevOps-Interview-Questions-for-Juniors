@@ -267,9 +267,9 @@ Abstract) protocol on port 6081.
    	- Geolocation Routing:
       		- Directs traffic to the resource that's geographically closest to the user's location. This can improve user experience by reducing latency, especially for geographically distributed resources.
   	- GeoProximity Routing (Traffic Flow only):
-        	- A variation of geolocation routing, it's specifically designed for Route 53 Traffic Flow, a premium routing control feature. It allows you to route traffic based on the proximity of your resources, not just the user's location. This is useful for scenarios where resources are geographically dispersed and latency optimization is crucial.
+     		- A variation of geolocation routing, it's specifically designed for Route 53 Traffic Flow, a premium routing control feature. It allows you to route traffic based on the proximity of your resources, not just the user's location. This is useful for scenarios where resources are geographically dispersed and latency optimization is crucial.
 	- Multivalue Answer Routing:
-         	- Provides redundancy by returning multiple healthy resource records in the DNS response. This allows clients to choose the optimal resource based on their own criteria (e.g., round robin selection).     
+   		- Provides redundancy by returning multiple healthy resource records in the DNS response. This allows clients to choose the optimal resource based on their own criteria (e.g., round robin selection).     
 
       			 
 
