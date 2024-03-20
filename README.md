@@ -277,13 +277,16 @@ Abstract) protocol on port 6081.
 
 36. **Define the purchasing options in instance?**
 
-37. **load balancer , auto scalling, state, configuration**
-38. **s3 lifecycle rule/storage types**
-39. **static:min=max=desired/dynamic:min!=max!=desired/scheduled autoscaling**
-40. **load balancer**
-41. **vpc NAT Gateway**
-42. **what is elastic ip=static public ip**
-43. **diff nat gateway nat instance**
+36. **What is AMI aand its types**
+37. **What is template**
+38. **what is nat gateway**
+39. **load balancer , auto scalling, state, configuration**
+40. **s3 lifecycle rule/storage types**
+41. **static:min=max=desired/dynamic:min!=max!=desired/scheduled autoscaling**
+42. **load balancer**
+43. **vpc NAT Gateway**
+44. **what is elastic ip=static public ip**
+45. **diff nat gateway nat instance**
  nat gateway = service of aws vpc
 43. **VPC endpoint**
 44. **all limitations**
