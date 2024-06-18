@@ -297,8 +297,42 @@ Abstract) protocol on port 6081.
 
 ## DEVOPS
 47. **routing policies and dns records**
+48. how to execute the next stage in jenkins pipline even if there one stage is failing
+
+  ``` pipeline {
+    agent any
+    stages {
+        stage('1') {
+            steps {
+                sh 'exit 0'
+            }
+        }
+        stage('2') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh "exit 1"
+                }
+            }
+        }
+        stage('3') {
+            steps {
+                sh 'exit 0'
+            }
+        }
+    }
+}```
+
+50. how to execute if else block of based pipeline in jenkins
+51. how to clear the workspace after every build
+52. if there are not any files present in the workspace then how to resolve this error
+53. Describe when and expression in Declarative Pipeline.
+54. how to clean the workspace after every build
+55. explain parallel pipeline in jenkins
+
 
 ## Docker Questions:
+1. write all docker commands
+2. 
 
   
 
