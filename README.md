@@ -295,6 +295,18 @@ Abstract) protocol on port 6081.
 47. **routing policies and dns records**
 48. ****
 
+## linux
+
+how to set the permission for the rohit user to use the command dmidecode?
+rohit ALL=(ALL) NOPASSWD: /usr/sbin/dmidecode
+
+How to resolve the error in linux booting process?
+What to do when there is error at starting of the linux operating system and message comes as epress ctrl + d?
+how to troubleshoot the network?
+all networking commands?
+how to show the linux file with highest size at top?
+how to remove the disk from the server? and if used umount command then there is errror called the busy how will you deal with it?
+
 ## DEVOPS
 47. **routing policies and dns records**
 48. how to execute the next stage in jenkins pipline even if there one stage is failing
@@ -477,7 +489,9 @@ Reverse proxies are typically implemented to help increase security, performance
 	Tip 6 – Disabling access logs (If required)
 Tip 7 – Configure HTTP/2 Support.
 
-28. **How can list all processes?**
+
+
+29. **How can list all processes?**
 
 		ps
 		ps -A
@@ -485,32 +499,32 @@ Tip 7 – Configure HTTP/2 Support.
 
 	There is `top` also not for all
 
-29. **How can list live processes?**
+30. **How can list live processes?**
 
 	    ps -aux | less
 
-30. **How could you check memory space?**
+31. **How could you check memory space?**
 
 	    cat /proc/meminfo
 
 	  `	free` >>> checks memory and SWAP memory
 
 
-31. **How could you check storage space?**	
+32. **How could you check storage space?**	
 		
     df -H
 
   
-32. **What’s file management in Linux?**
+33. **What’s file management in Linux?**
 	In Linux, most of the operations are performed on files. And to handle these files Linux has directories also known as folders which are maintained in a tree-like structure. Though, these directories are also a type of file themselves
 
   
-33. **What’s LVM and how can using it?**
+34. **What’s LVM and how can using it?**
 	Logical volume management (LVM) is a form of storage virtualization that offers system administrators a more flexible approach to managing disk storage space than traditional partitioning.
 
   
 
-34. **How could you mount a volume in Linux?**
+35. **How could you mount a volume in Linux?**
 	1. Identify the USB drive using the `lsblk` command.
 	2. Create a directory to mount the USB drive into. 
 	3. Check if it formatted or not
@@ -520,7 +534,7 @@ Tip 7 – Configure HTTP/2 Support.
   
 
 
-35. **What are Linux bootstrap processes?**
+36. **What are Linux bootstrap processes?**
 Bootstrapping in computer science is **the technique for producing a self-compiling compiler**. That is compiler/assembler written in the source programming
 
   
@@ -533,7 +547,7 @@ Bootstrapping in computer science is **the technique for producing a self-compil
 
 	  
 
-36. **Tell me about Linux file systems.**
+37. **Tell me about Linux file systems.**
 
 	  The Linux filesystem unifies all physical hard drives and partitions into a single directory structure, this is how you sort your data inside the storage.
 
