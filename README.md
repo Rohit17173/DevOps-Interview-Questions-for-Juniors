@@ -341,6 +341,37 @@ how to remove the disk from the server? and if used umount command then there is
 53. Describe when and expression in Declarative Pipeline.
 54. how to clean the workspace after every build
 55. explain parallel pipeline in jenkins
+```
+pipeline {
+    agent any
+    stages {
+        stage('Parallel Stage') {
+            parallel {
+                stage('Task 1') {
+                    steps {
+                        echo 'Running Task 1'
+                        // Task 1 commands go here
+                    }
+                }
+                stage('Task 2') {
+                    steps {
+                        echo 'Running Task 2'
+                        // Task 2 commands go here
+                    }
+                }
+                stage('Task 3') {
+                    steps {
+                        echo 'Running Task 3'
+                        // Task 3 commands go here
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+
 
 
 ## Docker Questions:
