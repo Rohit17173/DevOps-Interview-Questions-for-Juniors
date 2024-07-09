@@ -336,6 +336,37 @@ how to remove the disk from the server? and if used umount command then there is
 ```
 
 50. how to execute if else block of based pipeline in jenkins
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Example') {
+            steps {
+                script {
+                    // Define variables or conditions
+                    def condition = true
+                    def anotherCondition = false
+
+                    // Example of if-else block
+                    if (condition) {
+                        echo 'Condition is true'
+                        // Perform actions if condition is true
+                    } else if (anotherCondition) {
+                        echo 'Another condition is true'
+                        // Perform actions if another condition is true
+                    } else {
+                        echo 'Neither condition is true'
+                        // Perform default actions if no condition is true
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+
 51. how to clear the workspace after every build
 52. if there are not any files present in the workspace then how to resolve this error
 53. Describe when and expression in Declarative Pipeline.
