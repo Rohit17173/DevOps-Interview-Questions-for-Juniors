@@ -339,7 +339,81 @@ how to remove the disk from the server? and if used umount command then there is
 51. how to clear the workspace after every build
 52. if there are not any files present in the workspace then how to resolve this error
 53. Describe when and expression in Declarative Pipeline.
+```
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                // Build steps
+            }
+        }
+        stage('Test on master') {
+            when {
+                branch 'master'
+            }
+            steps {
+                echo 'Running tests on master branch...'
+                // Test steps
+            }
+        }
+        stage('Deploy to production') {
+            when {
+                allOf {
+                    branch 'master'
+                    environment name: 'DEPLOY_ENV', value: 'production'
+                }
+            }
+            steps {
+                echo 'Deploying to production...'
+                // Deploy steps
+            }
+        }
+        stage('Conditional based on expression') {
+            when {
+                expression {
+                    return env.BUILD_NUMBER.toInteger() % 2 == 0
+                }
+            }
+            steps {
+                echo 'Running because build number is even...'
+                // Steps to run if condition is met
+            }
+        }
+    }
+}
+```
+
+
 54. how to clean the workspace after every build
+```
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                cleanWs()
+                echo 'Building...'
+                // Build commands
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Test commands
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
+```
+
+
 55. explain parallel pipeline in jenkins
 ```
 pipeline {
@@ -370,6 +444,47 @@ pipeline {
     }
 }
 ```
+56. you see the execution of the jenkins server is slow how will you troubleshhot the jenkins server?
+
+Check System Resources
+CPU and Memory Usage 
+```
+top
+htop
+```
+Free Memory: 
+```
+free -m
+```
+Disk Usage: 
+```
+df -h
+```
+Analyze Jenkins Logs
+```
+tail -f /var/log/jenkins/jenkins.log
+```
+Review Jenkins Configuration
+Number of Executors: Adjust the number of executors to match your hardware capabilities.
+rust
+Build History: Clean up old builds that are no longer needed.
+Plugin Management: Remove or update unused plugins.
+Check Network and Disk I/O :
+Disk I/O: Use tools like iostat to check for disk I/O issues
+```
+iostat -xz 1 10
+```
+ Update Jenkins and Plugins
+Review Job Configuration
+Parallel Jobs:
+Limit the number of parallel jobs to prevent overloading the server.
+Heavy Jobs:
+Identify and optimize jobs that consume a lot of resources.
+
+
+
+
+
 
 
 
